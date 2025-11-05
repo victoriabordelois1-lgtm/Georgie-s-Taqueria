@@ -1,0 +1,258 @@
+:root{
+  --bg:#071a27; 
+  --accent:#7b1720; 
+  --white:#fff;
+  --container:1100px;
+  --gap:1rem;
+  --radius:12px;
+  --muted:#d7d7d7;
+  --max-width:1200px;
+}
+
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:'Oswald', Arial, sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:1rem;
+}
+
+.site-header{
+  background:transparent;
+  padding:1rem 0;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:1rem;
+}
+
+.logo{
+  font-family:'Bungee', 'Oswald', sans-serif;
+  color:var(--white);
+  margin:0;
+  font-size:1.6rem;
+  letter-spacing:4px;
+}
+.logo .sub{
+  display:block;
+  font-size:0.6rem;
+  color:var(--muted);
+  letter-spacing:2px;
+  margin-top:4px;
+}
+
+.main-nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.main-nav a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 8px;
+  border-radius:6px;
+  transition:background 0.2s ease;
+}
+.main-nav a:hover{
+  background:rgba(255,255,255,0.05);
+}
+
+.hero{
+  padding:3rem 0;
+  text-align:center;
+}
+.hero-title{
+  font-family:'Bungee', 'Oswald', sans-serif;
+  color:var(--accent);
+  font-size:2.6rem;
+  margin:0;
+  line-height:1.05;
+}
+
+.hero-subtitle {
+  font-family: 'Bungee', 'Oswald', sans-serif;
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.2;
+}
+
+.hero-sub{
+  color:var(--muted);
+  margin-top:0.5rem;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin-top:2rem;
+}
+.card{
+  background:rgba(255,255,255,0.03);
+  padding:1rem;
+  border-radius:12px;
+}
+.card-title{
+  color:var(--accent);
+  margin:0 0 0.3rem 0;
+  font-family:'Bungee', 'Oswald', sans-serif;
+}
+.card-text{
+  margin:0;
+  color:var(--muted);
+}
+
+.cta{
+  display:flex;
+  gap:1rem;
+  justify-content:center;
+  margin:2rem 0;
+}
+.btn{
+  background:var(--accent);
+  color:var(--white);
+  padding:0.8rem 1.2rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-block;
+  transition:transform 0.15s ease;
+}
+.btn:hover{
+  transform:scale(1.03);
+}
+.btn.outline{
+  background:transparent;
+  border:2px solid var(--accent);
+}
+
+.site-footer{
+  padding:2rem 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.9rem;
+  margin-top:3rem;
+}
+
+.page-title{
+  font-family:'Bungee', 'Oswald', sans-serif;
+  color:var(--accent);
+  font-size:2rem;
+  margin:1rem 0;
+}
+.menu-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+.menu-item{
+  background:rgba(255,255,255,0.03);
+  padding:1rem;
+  border-radius:10px;
+}
+.menu-item h3{
+  margin:0 0 0.4rem 0;
+  font-family:'Bungee', 'Oswald', sans-serif;
+}
+.price{
+  float:right;
+  color:var(--white);
+  font-weight:700;
+}
+
+.kits-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+.kit-card{
+  background:rgba(255,255,255,0.03);
+  padding:1rem;
+  border-radius:10px;
+}
+
+.reserva-form{
+  display:grid;
+  gap:0.6rem;
+  max-width:480px;
+}
+.reserva-form label{
+  font-weight:700;
+  color:var(--muted);
+}
+.reserva-form input{
+  padding:0.6rem;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:transparent;
+  color:var(--white);
+}
+.note{
+  color:var(--muted);
+  font-size:0.9rem;
+  margin-top:1rem;
+}
+
+.intro{
+  color:var(--muted);
+}
+.phone a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:700;
+}
+
+@media (max-width:900px){
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+  .menu-list{
+    grid-template-columns:1fr;
+  }
+  .kits-grid{
+    grid-template-columns:1fr;
+  }
+  .main-nav{
+    display:none;
+    flex-direction:column;
+    background:rgba(0,0,0,0.8);
+    position:absolute;
+    top:60px;
+    right:10px;
+    padding:1rem;
+    border-radius:10px;
+  }
+  .main-nav a{
+    display:block;
+    padding:0.5rem 0;
+  }
+
+  .promos {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .promos .card {
+    max-width: 300px;
+    text-align: center;
+  }
+} 
