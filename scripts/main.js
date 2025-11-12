@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Formulario reservas ---
   const form = document.getElementById('reservaForm');
   if (form) {
     form.addEventListener('submit', (e) => {
