@@ -73,9 +73,17 @@ body{
   background:rgba(255,255,255,0.05);
 }
 
-.hero{
-  padding:3rem 0;
-  text-align:center;
+.hero {
+  text-align: center;
+  padding: 4.5rem 1rem 2rem;
+}
+
+.hero-logo-img {
+  display:block;
+  margin: 0 auto 1rem auto;
+  width: 900px;       /* tamaño en desktop */
+  max-width: 90%;
+  height: auto;
 }
 .hero-title{
   font-family:'Bungee', 'Oswald', sans-serif;
@@ -88,9 +96,8 @@ body{
 .hero-subtitle {
   font-family: 'Bungee', 'Oswald', sans-serif;
   color: var(--white);
-  font-size: 1.3rem;
-  margin-top: 1rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  margin: 0.6rem 0 0.3rem;
 }
 
 .hero-sub{
@@ -157,57 +164,103 @@ body{
   font-size:2rem;
   margin:1rem 0;
 }
-.menu-list{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1rem;
-}
-.menu-item{
-  background:rgba(255,255,255,0.03);
-  padding:1rem;
-  border-radius:10px;
-}
-.menu-item h3{
-  margin:0 0 0.4rem 0;
-  font-family:'Bungee', 'Oswald', sans-serif;
-}
-.price{
-  float:right;
-  color:var(--white);
-  font-weight:700;
+.menu-list {
+  display: grid;
+  grid-template-columns: 1fr;   /* UNA sola columna */
+  gap: 1.5rem;                 /* espacio entre filas */
+  justify-items: center;       /* centra cada tarjeta horizontalmente */
+  margin-top: 1rem;
 }
 
-.kits-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1rem;
-}
-.kit-card{
-  background:rgba(255,255,255,0.03);
-  padding:1rem;
-  border-radius:10px;
+.menu-item {
+  background: rgba(255,255,255,0.03);
+  padding: 1.2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;            /* ancho máximo del item en desktop */
 }
 
-.reserva-form{
-  display:grid;
-  gap:0.6rem;
-  max-width:480px;
+.menu-item h3 {
+  font-family: 'Oswald', sans-serif; /* más simple, como los kits */
+  font-weight: 600;
+  color: var(--white);                /* texto blanco */
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: 0.5px;
 }
-.reserva-form label{
-  font-weight:700;
-  color:var(--muted);
+
+.price {
+  float: right;
+  color: var(--white);
+  font-weight: 700;
 }
-.reserva-form input{
-  padding:0.6rem;
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,0.06);
-  background:transparent;
-  color:var(--white);
+
+.kits-grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* ← solo una columna */
+  gap: 1.5rem;                  /* espacio vertical entre kits */
+  justify-items: center;        /* centra cada tarjeta horizontalmente */
 }
-.note{
-  color:var(--muted);
-  font-size:0.9rem;
-  margin-top:1rem;
+
+.kit-card {
+  background: rgba(255,255,255,0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 900px; /* ← más largo (ajustá a gusto: 800–1000px) */
+  width: 100%;
+}
+
+.reservas-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente si el contenido es bajo */
+  min-height: 70vh;        /* ocupa la mayor parte de la pantalla */
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'Bungee', 'Oswald', sans-serif;
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.reserva-form label {
+  font-weight: 600;
+  color: var(--muted);
+  align-self: flex-start;
+}
+
+.reserva-form input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: var(--white);
+}
+
+.reserva-form .btn {
+  margin-top: 1rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
 }
 
 .intro{
@@ -249,10 +302,52 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+     width: 100%;
   }
 
-  .promos .card {
-    max-width: 300px;
-    text-align: center;
+.promos .card {
+  max-width: 400px;               
+  width: 100%;
+  text-align: center;            
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
   }
-} 
+  }
+
+  .delivery-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centra horizontalmente */
+  justify-content: center;  /* centra verticalmente */
+  min-height: 70vh;
+  text-align: center;
+}
+
+.delivery-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.delivery-info p,
+.delivery-info ul {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.delivery-info ul li {
+  margin: 0.3rem 0;
+}
+
+.phone a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
