@@ -30,7 +30,7 @@ body{
 .site-header {
   background: transparent;
   padding: 1rem 0;
-  position: static; /* 👈 deja de ser sticky */
+  position: static; 
 }
 .header-inner {
   display: flex;
@@ -146,7 +146,7 @@ body{
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family:'Oswald', sans-serif; /* 👈 tipografía unificada */
+  font-family:'Oswald', sans-serif; 
   display: inline-block;
   transition: transform 0.15s ease, background 0.2s ease;
 }
@@ -251,11 +251,11 @@ body{
 
 .reserva-form {
   display: grid;
-  gap: 1rem;              /* más espacio entre los campos */
-  max-width: 600px;       /* más ancho */
+  gap: 1rem;              
+  max-width: 600px;       
   width: 100%;
-  margin: 2rem auto;      /* centrado */
-  background: rgba(255, 255, 255, 0.05); /* leve fondo translúcido para destacarlo */
+  margin: 2rem auto;      
+  background: rgba(255, 255, 255, 0.05); 
   padding: 2rem;
   border-radius: 16px;
 }
@@ -268,17 +268,17 @@ body{
 
 .reserva-form input,
 .reserva-form select {
-  padding: 0.8rem 1rem;     /* más altos */
+  padding: 0.8rem 1rem;     
   border-radius: 8px;
   border: none;
-  background: var(--white); /* 👈 fondo blanco */
-  color: #000;              /* 👈 texto negro */
+  background: var(--white); 
+  color: #000;              
   font-size: 1rem;
   width: 100%;
 }
 
 .reserva-form input::placeholder {
-  color: #555; /* placeholder gris oscuro */
+  color: #555; 
 }
 
 .reserva-form button {
@@ -434,8 +434,8 @@ height: 300px;
   justify-content: center;
   align-items: flex-start;
   gap: 1.5rem;
-  flex-wrap: nowrap; /* 👈 evita que bajen a otra fila */
-  overflow-x: auto; /* 👈 si no entran, permite scrollear horizontalmente */
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
   margin-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -444,8 +444,8 @@ height: 300px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1rem;
-  width: 280px;        /* 👈 todas mismas dimensiones */
-  height: 350px;       /* 👈 alto fijo para que sean iguales */
+  width: 280px;        
+  height: 350px;       
   text-align: center;
   flex-shrink: 0;
   transition: transform 0.2s ease;
@@ -471,12 +471,12 @@ height: 300px;
 }
 
 .delivery-platforms a {
-  color: var(--white);         /* blanco como el resto del texto */
-  text-decoration: underline;  /* subrayado tipo link */
+  color: var(--white);         
+  text-decoration: underline;  
   font-weight: 400;
   transition: color 0.2s ease;
 }
 
 .delivery-platforms a:hover {
-  color: var(--accent);        /* cambia a rojo/bordo al pasar el mouse */
+  color: var(--accent);        
 }
