@@ -480,3 +480,12 @@ height: 300px;
 .delivery-platforms a:hover {
   color: var(--accent);        
 }
+
+.cantidad {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);     /* gris claro, suave */
+  font-style: italic;
+  margin-top: -0.2rem;
+  margin-bottom: 0.3rem;
+}
